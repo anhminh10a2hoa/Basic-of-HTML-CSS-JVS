@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="”Content-Type”" content="”text/html;" charset="utf-8">
+	<script src="http://www.cc.puv.fi/~e1800956/assignment5/jquery-3.3.1.js"></script>
+	<script src="http://www.cc.puv.fi/~e1800956/assignment5/assignment61.js"></script>
+	<title>Assignment6</title>
+	<style>
+	h1, h3 {
+		color: red;
+	}
+	th, td {
+		border: 1px solid black;
+		padding: 15px;
+	}
+	th {
+		text-align: center;
+		background-color: #ff8c00
+	}
+	td {
+		text-align: center;
+	}
+	textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		resize: vertical;
+	}
+	i {
+		color: red;
+	}
+	input[type="button"]{
+		margin-left: 0.5em;
+		height: 2.5em;
+		padding: 0.2em 1em 0.2em 2.25em;
+		font-size: 0.75em;
+		font-weight: bold;
+		font-family: "Open Sans";
+		text-transform: uppercase;
+		color: #696666;
+		background: url(https://i.imgur.com/Th606mh.png) no-repeat scroll 0.75em 0.07em transparent;
+		background-size: 13.4px 51px;
+		border-radius: 2em;
+		border: 0.15em solid #F9C23C;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+	}
+	input[type="button"]:hover {
+		color: #fff;
+		background-color: #EAA502;
+		border-color: #EAA502;
+		background-position: 0.75em bottom;
+		-webkit-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+		input[type="button"]:focus {
+		background-position: 2em -4em;
+		-webkit-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		}
+	@font-face {
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 700;
+		src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+	}
+	b {
+		color: #FF6F00;
+	}
+	body {
+		background-color: #FFF8DC ;
+	}
+	</style>
+</head>
+<body><center>
+	<div class="menu">
+	<input type="button" id="home" value="Home">
+	<input type="button" id="slide_down" value="Menu">
+	<div class="link1" style="display:none">
+	<input type="button" id="school" value="School">
+	</div>
+	<div class="link2" style="display:none">
+	<input type="button" id="about" value="About">
+	</div>
+	<div class="link3" style="display:none">
+	<input type="button" id="contact" value="Contact">
+	</div>
+	<div class="close" style="display:none">
+	<input type="button" id="close_button" value="Close">
+	</div>
+	</div>
+	
+	<div class="page1" style="display:none">
+	 <img id="image_2" src="assignment5/vamk3.png" width="266" height="146">
+	</div>
+	<div class="page2" style="display:none">
+	 
+	<font size="4" face="Verdana">Assignment6 <br> Written by Anh Minh</font><br>
+	<img id="image_3" src="assignment5/hello.gif" width="300" height="300"><br>
+	</div>
+	<div class="page3" style="display:none">
+	<font size="4" face="Comic sans MS">
+	 <b>Name:</b>Hoang Anh Minh<br>
+	<b>DOB:</b>25/06/2000<br>
+	<b>Email:</b>anhminh10a2hoa@gmail.com<br>
+	</font></div>
+	<hr>
+	
+	<div class="en">
+	<div class="headingen">
+	<h1>Quality of life in Vaasa</h1>
+	</div>
+
+	<div class="part1_en">
+	<h3>User's data</h3>
+		
+		<table>
+		<tbody><tr><th>Age</th><td><input type="number" max="100" min="3" step="1" id="age_en" required=""></td></tr>
+		<tr><th>Education</th><td><input type="text" id="education_en" required=""></td></tr>
+		<tr><th>Job</th><td><input type="text" id="job_en" required=""></td></tr>
+		<tr><th>Hobbies</th><td><input type="text" id="hobby_en" required=""></td></tr>
+		<tr><th>Type of living</th><td><input type="text" id="tol_en" required=""></td></tr>
+		</tbody></table>
+		<input type="button" id="next_1_english" value="Next">
+		<input type="button" id="translate_1_english" value="Translate this page">
+	</div>
+	
+	<div class="part2_en" style="display:none"> 
+	
+	<h3>Feedback on infrastructure</h3>
+		<label for="subject">Type here!</label>
+		<textarea id="part2fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_2_english" value="Next">
+		<input type="button" id="return_1_english" value="Return">
+		<input type="button" id="translate_2_english" value="Translate this page">
+	</div>
+	
+	<div class="part3_en" style="display:none">
+	<h3>Feedback on accommodation</h3>
+		<label for="subject">Type here!</label>
+		<textarea id="part3fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_3_english" value="Next">
+		<input type="button" id="return_2_english" value="Return">
+		<input type="button" id="translate_3_english" value="Translate this page">
+	</div>
+	
+	<div class="part4_en" style="display:none">
+	<h3>Feedback on transportation</h3>
+		<label for="subject">Type here!</label>
+		<textarea id="part4fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_4_english" value="Next">
+		<input type="button" id="return_3_english" value="Return">
+		<input type="button" id="translate_4_english" value="Translate this page">
+	</div>
+	
+	<div class="part5_en" style="display:none">
+	<h3>Feedback on education</h3>
+		<label for="subject">Type here!</label>
+		<textarea id="part5fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_5_english" value="Next">
+		<input type="button" id="return_4_english" value="Return">
+		<input type="button" id="translate_5_english" value="Translate this page">
+	</div>
+	
+	<div class="part6_en" style="display:none">
+	<h3>Feedback on recruitment</h3>
+		<label for="subject">Type here!</label>
+		<textarea id="part6fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_6_english" value="Next">
+		<input type="button" id="return_5_english" value="Return">
+		<input type="button" id="translate_6_english" value="Translate this page">
+	</div>
+	
+	<div class="part7_en" style="display:none">
+	<h3>Feedback</h3>
+		<label for="subject">About culture</label>
+		<textarea id="part7fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<label for="subject">About recreation</label>
+		<textarea id="part71fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<label for="subject">About possibilities</label>
+		<textarea id="part72fb_en" placeholder="Write something.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="submit_english" value="Submit">
+		<input type="button" id="return_6_english" value="Return">
+		<input type="button" id="translate_7_english" value="Translate this page">
+		
+	</div>
+	<div class="finish">
+		<input type="button" id="finish_en" value="Finish">
+	</div>
+	<div class="part8_en" style="display:none">
+	<font size="4" face="Comic sans MS">
+	<h1>THANKS FOR YOUR SUBMISSION:D</h1>
+	</font>
+	<img id="image_en" src="assignment5/thanks_en.gif" width="500" height="300"><br>
+	<table>
+	<tr><th>Age</th><td id="age"></td></tr>
+	<tr><th>Education</th><td id="education"></td></tr>
+	<tr><th>Job</th><td id="job"></td></tr>
+	<tr><th>Hobby</th><td id="hobby"></td></tr>
+	<tr><th>Type of living</th><td id="tol"></td></tr>
+	<tr><th>Infrastructure</th><td id="part2fb"></td></tr>
+	<tr><th>Accommodation</th><td id="part3fb"></td></tr>
+	<tr><th>Transportation</th><td id="part4fb"></td></tr>
+	<tr><th>Education</th><td id="part5fb"></td></tr>
+	<tr><th>Recruitment</th><td id="part6fb"></td></tr>
+	<tr><th>Culture</th><td id="part7fb"></td></tr>
+	<tr><th>Recreation</th><td id="part71fb"></td></tr>
+	<tr><th>Possibilities</th><td id="part72fb"></td></tr>
+	</table>
+	<input type="button" id="translate_8_english" value="Translate this page">
+	</div></div>
+	
+	
+	
+	<!-- Suomi -->
+	
+	<div class="suo">
+	<div class="headingsuo" style="display:none">
+	<h1>Vaasan elämänlaatu</h1>
+	</div>
+	
+	<div class="part1_suo" style="display:none">
+	<h3>Käyttäjän tiedot</h3>
+		<table>
+		<tbody><tr><th>Ikä</th><td><input type="number" id="age_suo" max="100" min="3" step="1" required=""></td></tr>
+		<tr><th>Koulutus</th><td><input type="text" id="education_suo" required=""></td></tr>
+		<tr><th>Työ</th><td><input type="text" id="job_suo" required=""></td></tr>
+		<tr><th>Harrastukset</th><td><input type="text" id="hobby_suo" required=""></td></tr>
+		<tr><th>Elämän tyyppi</th><td><input type="text" id="tol_suo" required=""></td></tr>
+		</tbody></table>
+		<input type="button" id="next_1_suomi" value="Seuraava">
+		<input type="button" id="translate_1_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part2_suo" style="display:none"> 
+	<h3>Palaute infrastruktuurista</h3>
+		<label for="subject">Kirjoita tähän!</label>
+		<textarea id="part2fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_2_suomi" value="Seuraava">
+		<input type="button" id="return_1_suomi" value="Return">
+		<input type="button" id="translate_2_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part3_suo" style="display:none">
+	<h3>Palaute majoituksesta</h3>
+		<label for="subject">Kirjoita tähän!</label>
+		<textarea id="part3fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_3_suomi" value="Seuraava">
+		<input type="button" id="return_2_suomi" value="Return">
+		<input type="button" id="translate_3_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part4_suo" style="display:none">
+	<h3>Palautetta kuljetuksesta</h3>
+		<label for="subject">Kirjoita tähän!</label>
+		<textarea id="part4fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_4_suomi" value="Seuraava">
+		<input type="button" id="return_3_suomi" value="Return">
+		<input type="button" id="translate_4_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part5_suo" style="display:none">
+	<h3>Palaute koulutuksesta</h3>
+		<label for="subject">Kirjoita tähän!</label>
+		<textarea id="part5fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_5_suomi" value="Seuraava">
+		<input type="button" id="return_4_suomi" value="Return">
+		<input type="button" id="translate_5_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part6_suo" style="display:none">
+	<h3>Palaute rekrytoinnista</h3>
+		<label for="subject">Kirjoita tähän!</label>
+		<textarea id="part6fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="next_6_suomi" value="Seuraava">
+		<input type="button" id="return_5_suomi" value="Return">
+		<input type="button" id="translate_6_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part7_suo" style="display:none">
+	<h3>Palaute</h3>
+		<label for="subject">Tietoja kulttuurista</label>
+		<textarea id="part7fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<label for="subject">Tietoa virkistyskäytöstä</label>
+		<textarea id="part71fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<label for="subject">Tietoja mahdollisuuksista</label>
+		<textarea id="part72fb_suo" placeholder="Kirjoittaa jotain.." style="height:200px" required=""></textarea>
+		<br>
+		<input type="button" id="submit_suomi" value="Lähetä">
+		<input type="button" id="return_6_suomi" value="Return">
+		<input type="button" id="translate_7_suomi" value="Kääntää tämän osan">
+	</div>
+	
+	<div class="part8_suo" style="display:none">
+	<font size="4" face="Comic sans MS">
+	<h1>Kiitos lähetyksestäsi:D</h1>
+	</font>
+	<img id="image_suo" src="assignment5/thanks_fi.gif" width="500" height="300"><br>
+	<table>
+	<tr><th>Ikä</th><td id="age1"></td></tr>
+	<tr><th>Koulutus</th><td id="education1"></td></tr>
+	<tr><th>Työ</th><td id="job1"></td></tr>
+	<tr><th>Harrastukset</th><td id="hobby1"></td></tr>
+	<tr><th>Elämän tyyppi</th><td id="tol1"></td></tr>
+	<tr><th>Infrastruktuurista</th><td id="part2fb1"></td></tr>
+	<tr><th>Majoituksesta</th><td id="part3fb1"></td></tr>
+	<tr><th>Kuljetuksesta</th><td id="part4fb1"></td></tr>
+	<tr><th>Koulutuksesta</th><td id="part5fb1"></td></tr>
+	<tr><th>Rekrytoinnista</th><td id="part6fb1"></td></tr>
+	<tr><th>Kulttuurista</th><td id="part7fb1"></td></tr>
+	<tr><th>Virkistyskäytöstä</th><td id="part71fb1"></td></tr>
+	<tr><th>Mahdollisuuksista</th><td id="part72fb1"></td></tr>
+	</table>
+	<input type="button" id="translate_8_suomi" value="Kääntää tämän osan">
+	</div>
+	<div class="finish1" style="display:none">
+		<input type="button" id="finish_suo" value="Loppu">
+	</div>
+	</div>
+	</center>
+</body>
+</html>
